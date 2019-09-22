@@ -1,7 +1,7 @@
 <template>
   <div class="mx-4 w-full rounded-lg bg-primary shadow sm:w-2/3 sm:px-0 md:max-w-lg">
     <div class="px-3 text-4xl font-thin tracking-wide md:text-6xl">
-      Posts
+      Publicaciones
     </div>
     <template v-for="(post, index) in posts">
       <div
