@@ -21,20 +21,13 @@
 
 <script>
 import Logo from '~/components/Logo.vue';
+import { mapState } from 'vuex';
 
 export default {
-  async asyncData({ $axios }) {
-    const response = await $axios.$get(
-      'https://jsonplaceholder.typicode.com/posts'
-    );
-    let min = 5;
-    let max = 10;
-    let random = Math.random() * (max - min) + min;
-    let posts = response.slice(0, random);
-
-    return {
-      posts
-    };
+  computed: {
+    ...mapState({
+      posts: state => state.posts
+    })
   }
 };
 </script>
