@@ -6,7 +6,9 @@
 
     <!-- Content -->
     <div class="container flex justify-center items-center mx-auto">
-      <nuxt />
+      <transition name="page">
+        <nuxt v-if="show" />
+      </transition>
     </div>
 
     <!-- Footer -->
@@ -24,6 +26,12 @@ export default {
   components: {
     Logo,
     Toolbar
+  },
+  data() {
+    return { show: false };
+  },
+  mounted() {
+    this.show = true;
   }
 };
 </script>
