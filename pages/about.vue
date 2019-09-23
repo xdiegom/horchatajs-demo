@@ -16,7 +16,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  head() {
+    return {
+      title: 'Acerca de',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Acerca de la demostración'
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>

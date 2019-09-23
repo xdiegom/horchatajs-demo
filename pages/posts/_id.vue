@@ -24,6 +24,18 @@
 import { mapState } from 'vuex';
 
 export default {
+  head() {
+    return {
+      title: this.post.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.title
+        }
+      ]
+    };
+  },
   layout: 'PostLayout',
   computed: {
     ...mapState({

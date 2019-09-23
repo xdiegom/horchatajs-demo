@@ -26,6 +26,11 @@ import Logo from '~/components/Logo.vue';
 import { mapState } from 'vuex';
 
 export default {
+  head() {
+    return {
+      title: 'Publicaciones'
+    };
+  },
   data() {
     return { show: false };
   },

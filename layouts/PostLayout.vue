@@ -42,6 +42,19 @@ import { mapState } from 'vuex';
 
 export default {
   name: 'PostLayout',
+  head() {
+    return {
+      titleTemplate: '%s - Demo HorchataJS Septiembre 2019',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Demostración sobre charla: Are you Nuxt? Introducción a Nuxt.js'
+        }
+      ]
+    };
+  },
   components: {
     Logo,
     Toolbar

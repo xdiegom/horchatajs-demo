@@ -23,6 +23,19 @@ import Logo from '~/components/Logo.vue';
 import Toolbar from '~/components/Toolbar.vue';
 
 export default {
+  head() {
+    return {
+      titleTemplate: '%s - Demo HorchataJS Septiembre 2019',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Demostración sobre charla: Are you Nuxt? Introducción a Nuxt.js'
+        }
+      ]
+    };
+  },
   components: {
     Logo,
     Toolbar
