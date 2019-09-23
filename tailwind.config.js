@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#f7df1e'
+        primary: '#f7df1e',
+        'nuxt-light': '#41b883',
+        'nuxt-dark': '#35495e'
       }
     }
   },
