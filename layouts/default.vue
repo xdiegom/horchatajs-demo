@@ -12,8 +12,8 @@
     </div>
 
     <!-- Footer -->
-    <div class="flex w-full bg-gray-600 justify-center py-3 mx-auto items-center">
-      <logo class="h-4 sm:h-6" />
+    <div class="flex w-full justify-center w-1/6 mb-4 rounded-lg py-3 items-center">
+      <logo class="h-6 sm:h-10" />
     </div>
   </div>
 </template>
