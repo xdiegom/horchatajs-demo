@@ -5,7 +5,7 @@
     <toolbar />
 
     <!-- Content -->
-    <div class="container flex justify-center items-center mx-auto">
+    <div class="mt-20 container flex justify-center items-center mx-auto">
       <transition name="page">
         <nuxt />
       </transition>
