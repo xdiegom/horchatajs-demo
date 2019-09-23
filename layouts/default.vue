@@ -7,7 +7,7 @@
     <!-- Content -->
     <div class="container flex justify-center items-center mx-auto">
       <transition name="page">
-        <nuxt v-if="show" />
+        <nuxt />
       </transition>
     </div>
 

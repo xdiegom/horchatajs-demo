@@ -7,7 +7,7 @@
     <!-- Content -->
     <div class="flex flex-col flex-1 p-4 items-center md:p-8">
       <transition name="page">
-        <nuxt v-if="show" />
+        <nuxt />
       </transition>
 
       <!-- Post Pagination -->
