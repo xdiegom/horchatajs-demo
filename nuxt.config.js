@@ -48,6 +48,15 @@ export default {
   },
 
   /*
+   ** Pre-render dynamic routes
+   ** https://nuxtjs.org/api/configuration-generate#the-generate-property
+   ** fallback: https://nuxtjs.org/faq/netlify-deployment#for-site-generated-in-spa-mode
+   */
+  generate: {
+    fallback: true
+  },
+
+  /*
    ** Build configuration
    */
   build: {
