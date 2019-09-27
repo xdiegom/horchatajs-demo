@@ -31,16 +31,16 @@ export default {
       title: 'Publicaciones'
     };
   },
-  data() {
-    return { show: false };
-  },
-  mounted() {
-    this.show = true;
-  },
-  computed: {
-    ...mapState({
-      posts: state => state.posts
-    })
+  async asyncData({ $axios }) {
+    const response = await $axios.$get(
+      'https://jsonplaceholder.typicode.com/posts'
+    );
+
+    let posts = response.slice(0, 4);
+
+    return {
+      posts
+    };
   }
 };
 </script>

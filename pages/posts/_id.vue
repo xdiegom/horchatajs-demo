@@ -37,12 +37,14 @@ export default {
     };
   },
   layout: 'PostLayout',
-  computed: {
-    ...mapState({
-      posts: state => state.posts
-    }),
-    post() {
-      return this.posts.find(p => parseInt(this.$route.params.id) === p.id);
+  async asyncData({ $axios, params, error, payload }) {
+    if (payload) return { post: payload };
+    else {
+      return {
+        post: await $axios.$get(
+          `https://jsonplaceholder.typicode.com/posts/${params.id}`
+        )
+      };
     }
   }
 };

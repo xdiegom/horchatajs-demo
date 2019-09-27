@@ -1,4 +1,5 @@
 import pkg from './package';
+import axios from 'axios';
 
 export default {
   mode: 'universal',
@@ -52,8 +53,23 @@ export default {
    ** https://nuxtjs.org/api/configuration-generate#the-generate-property
    ** fallback: https://nuxtjs.org/faq/netlify-deployment#for-site-generated-in-spa-mode
    */
+  /*
+   ** Pre-render dynamic routes
+   ** https://nuxtjs.org/api/configuration-generate#the-generate-property
+   */
   generate: {
-    fallback: true
+    fallback: true,
+    routes: async function() {
+      let data = [];
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      data = res.data.slice(0, 4);
+      return data.map(post => {
+        return {
+          route: '/posts/' + post.id,
+          payload: post
+        };
+      });
+    }
   },
 
   /*

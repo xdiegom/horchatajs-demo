@@ -7,7 +7,7 @@
     <!-- Content -->
     <div class="container flex justify-center items-center mx-auto">
       <transition name="page">
-        <nuxt v-if="show" />
+        <nuxt />
       </transition>
     </div>
 
@@ -39,12 +39,6 @@ export default {
   components: {
     Logo,
     Toolbar
-  },
-  data() {
-    return { show: false };
-  },
-  mounted() {
-    this.show = true;
   }
 };
 </script>
